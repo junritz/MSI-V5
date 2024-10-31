@@ -1,0 +1,27 @@
+<!-- view-pdf.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+</head>
+<body style="margin: 0; height: 100dvh;" >
+    <iframe id="pdfViewer" width="100%" height="100%"></iframe>
+
+    <script>
+        // Extract the base64 PDF and custom title from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const pdfData = urlParams.get("pdf");
+        const orderId = urlParams.get("order_id");
+        const companyName = urlParams.get("company_name");
+
+        // Set the document title dynamically based on the order ID and company
+        document.title = `${companyName} - Order ${orderId}`;
+
+        // Display the PDF
+        const pdfViewer = document.getElementById("pdfViewer");
+        pdfViewer.src = `data:application/pdf;base64,${pdfData}`;
+    </script>
+</body>
+</html>

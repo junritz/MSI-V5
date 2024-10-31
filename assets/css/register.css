@@ -1,0 +1,179 @@
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: var(--main-color);
+}
+
+.wrapper {
+  background-color: white;
+  height: 100vh;
+  width: max(40%, 600px);
+  padding: 10px;
+  border-radius: 0 20px 20px 0;
+  z-index: 999;
+}
+
+.form-fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+}
+
+#login {
+  display: none;
+}
+
+.switch {
+  cursor: pointer;
+}
+
+.title {
+  font-weight: bolder;
+  font-size: 3em;
+  color: var(--third-color);
+}
+
+.register-form {
+  width: min(400px, 100%);
+}
+
+.input-group-text {
+  background-color: var(--black-color);
+  border: 1px solid var(--black-color);
+}
+
+.input-group .form-control {
+  box-shadow: none;
+  background-color: var(--text-color);
+  transition: 150ms ease;
+  border: 1px solid var(--black-color);
+  color: var(--black-color);
+}
+
+.input-group.input-focus .input-group-text {
+  background-color: var(--main-color);
+}
+
+.input-group .form-control::placeholder {
+  color: var(--third-color);
+}
+
+@media (max-width: 1100px) {
+  .wrapper {
+    width: min(600px, 100%);
+    border-radius: 0;
+  }
+}
+
+.logo-container {
+  height: 35%;
+}
+
+.inputs input {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--main-color);
+}
+
+#verify-otp-modal input[type="number"]::-webkit-inner-spin-button,
+#verify-otp-modal input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+#verify-otp-modal .form-control:focus {
+  box-shadow: none;
+  border: 2px solid red;
+}
+
+#verify-otp-modal .validate {
+  border-radius: 20px;
+  height: 40px;
+  background-color: red;
+  border: 1px solid red;
+  width: 140px;
+}
+
+.form-container {
+  width: 30%;
+  padding: 20px 30px;
+}
+
+@media (max-width: 1020px) {
+  .form-container {
+    width: 80%;
+  }
+}
+
+@media (max-width: 531px) {
+  .form-container {
+    width: 100%;
+  }
+}
+
+.register-button {
+  width: 100%;
+  border: 1px solid var(--black-color);
+  background-color: var(--main-color);
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 8px 0;
+  color: var(--black-color);
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}
+
+.password-input {
+  border-radius: 0px 6px 6px 0px !important;
+}
+
+/* Adjust positioning of the eye icon */
+.input-group .toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* Make the modal body scrollable */
+#termsModal .modal-body {
+  max-height: 400px; /* Adjust this height as needed */
+  overflow-y: auto;
+}
+
+.resend-otp{
+  display: none;
+}
+
+#resend-otp-button{
+  cursor: pointer;
+}
+
+
+/* Forgot password */
+.forgot-pass-container {
+  max-width: 600px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Optional: Custom styling */
+.container {
+  max-width: 400px;
+}
+
+.shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
